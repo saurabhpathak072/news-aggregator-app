@@ -2,15 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link
-      rel="stylesheet"
-      href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css"
-  />
- <link
-    href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono&display=swap" 
-    rel="stylesheet"
-  /> 
+   rel="stylesheet" 
+   href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+   />
+
+   <link
+   rel="stylesheet" 
+   href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css"
+   />
+
+
+
+   <link rel="stylesheet" href="./CSS/style.css">
   <title>News Aggregator</title>
 </head>
 <body>
@@ -19,23 +24,21 @@
       <label class="label">
         <div class="toggle">
           <input
-           type="checkbox"
+           type="CheckBox" 
            class="toggle-state"
            name="check"
            value="check"
            id="mode-switch"
-           >
+           />
 
-        <div class="toggle-inner">
-          <div class="indicator"></div>
+          <div class="toggle-inner">
+            <div class="indicator"></div>
+          </div>
+
+          <div class="active-bg"></div>
+
         </div>
-
-        <div class="active-bg"></div>
-
-        </div>
-
-        <div class="label-text">Enable Dark Mode</div>
-
+        <div class="label-text">enable Dark Mode</div>
       </label>
     </div>
 
@@ -52,26 +55,27 @@
   <main class="container">
     <section class="section search">
       <input
-       type="text"
-       id="search" 
+       type="text" 
+       id="search"
        placeholder="Type and press enter to search..."
-      >
-      <button class="clear" id="clear-search">
-        &times;
-      </button>
+       />
+
+       <button
+        class="clear"
+         id="clear-search"
+         > &times;
+         </button>
     </section>
 
     <section class="section news">
-      <ul class="articles" id="news-articles">
-
-      </ul>
+      <ul class="articles" id="news-articles"></ul>
       <div class="not-found notification is-info" style="display: none;">
-        No Articles found based on search
+        no articles was found based on search.
       </div>
 
       <div class="error" style="display: none;">
         <div class="notification is-danger">
-          Could no fech article. Ty again...
+          could not fetch Articles. Try Again.
         </div>
       </div>
 
@@ -91,23 +95,24 @@
           <div></div>
         </div>
       </div>
-
-      <button class="button" id="show-more">Show-More</button>
-
+      <button class="button" id="show-more">Show More</button>
     </section>
+</main>
 
-  </main>
+    <footer class="footer">
+      <div class="container has-text-centered">
+        <p>
+          <strong>News Aggregator</strong> developed by
+          <a href="https://github.com/saurabhpathak072">Saurabh Pathak</a>. &copy;
+          2020.
+        </p>
+      </div>
+    </footer>
 
-  <footer class="footer">
-    <div class="content has-text-centered">
-      <p>
-        <strong>News Aggregator</strong> by
-        <a href="https://github.com/saurabhpathak072">Saurabh Pathak</a>. &copy;
-        2020.
-      </p>
-    </div>
-  </footer>
+  
 
-  <script src="./Script/index.js"></script>
+  <script src="./JS/index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>

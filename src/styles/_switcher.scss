@@ -1,16 +1,17 @@
-.label {
-    display: inline-flex;
+.label{
+    display: -ms-inline-flexbox;
+    display: flex;
     align-items: center;
     cursor: pointer;
-  }
-  
-  .label-text {
+}
+
+.label-text{
     font-size: 1.4rem;
     margin-left: 8px;
     color: var(--card-col);
-  }
-  
-  .toggle {
+}
+
+.toggle{
     isolation: isolate;
     position: relative;
     height: 24px;
@@ -18,9 +19,9 @@
     border-radius: 15px;
     background: #d6d6d6;
     overflow: hidden;
-  }
-  
-  .toggle-inner {
+}
+
+.toggle-inner{
     z-index: 2;
     position: absolute;
     top: 1px;
@@ -29,36 +30,37 @@
     width: 46px;
     border-radius: 15px;
     overflow: hidden;
-  }
-  
-  .active-bg {
+}
+
+.active-bg{
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 200%;
     background: #7fa2fd;
-    transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%,0,0);
     transition: transform 0.05s linear 0.17s;
-  }
-  
-  .toggle-state {
+}
+
+.toggle-state {
     display: none;
-  }
-  
-  .indicator {
+}
+
+.indicator {
     height: 100%;
     width: 200%;
     background: white;
     border-radius: 13px;
-    transform: translate3d(-75%, 0, 0);
+    transform: translate3d(-75%,0,0);
     transition: transform 0.35s cubic-bezier(0.85, 0.05, 0.18, 1.35);
-  }
-  
-  .toggle-state:checked ~ .active-bg {
+}
+
+.toggle-state:checked ~ .active-bg {
     transform: translate3d(-50%, 0, 0);
-  }
-  
-  .toggle-state:checked ~ .toggle-inner .indicator {
+}
+
+.toggle-state:checked ~ .toggle-inner .indicator {
     transform: translate3d(25%, 0, 0);
-  }
+}
+
