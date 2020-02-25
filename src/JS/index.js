@@ -4,7 +4,7 @@ import { getData } from '../JS/request.js';
 const apiKey = process.env.APIKEY;
 const headlinesURL = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`;
 const everythingURL = `https://newsapi.org/v2/everything?apiKey=${apiKey}`;
-const apiKey = ace352d7d0f040058c2f008f440820ee ;
+
 // elements
 
 const loader = document.querySelector('#loading');
@@ -64,6 +64,7 @@ async function getArticles(
         const list = renderNews(articles);
 
         newsContainer.innerHTML = list;
+        console.log(list);
         newsContainer.style.display = 'grid';
         notFound.style.display = 'none';
 
@@ -85,7 +86,7 @@ async function getArticles(
 }
 
 function init() {
-    themeInit();
+    //themeInit();
     loader.style.display = 'flex' ; 
     error.style.display = 'none';
     clearSearch.style.display = 'none';
@@ -159,33 +160,33 @@ function infiniteScroll(){
     getArticles(isSearch);
 }
 
-switcher.addEventListener('change', e => {
-    const checked = e.target.checked;
-    const theme = checked ? 'dark' : 'light' ;
-    changeTheme(theme);
-});
+// switcher.addEventListener('change', e => {
+//     const checked = e.target.checked;
+//     const theme = checked ? 'dark' : 'light' ;
+//     changeTheme(theme);
+// });
 
-function changeTheme(theme){
-    if(theme == 'dark'){
-        document.body.classList.add('dark-mode');
-        localStorage.setItem('theme','dark');
-    }
-    else if (theme === 'light'){
-        document.body.classList.remove('dark-mode');
-        localStorage.setItem('theme' , 'light');
-    }
-}
+// function changeTheme(theme){
+//     if(theme == 'dark'){
+//         document.body.classList.add('dark-mode');
+//         localStorage.setItem('theme','dark');
+//     }
+//     else if (theme === 'light'){
+//         document.body.classList.remove('dark-mode');
+//         localStorage.setItem('theme' , 'light');
+//     }
+// }
 
-function themeInit(){
-    if(localStorage.getItem('theme')){
-        theme.localStorage.getItem('theme');
-    }
-    else{
-        theme='light';
-        localStorage.setItem('theme' , 'light');
-    }
+// function themeInit(){
+//     if(localStorage.getItem('theme')){
+//         theme.localStorage.getItem('theme');
+//     }
+//     else{
+//         theme='light';
+//         localStorage.setItem('theme' , 'light');
+//     }
 
-    changeTheme(theme);
-    switcher.checked = theme === 'dark' ? true : false;
-}
+//     changeTheme(theme);
+//     switcher.checked = theme === 'dark' ? true : false;
+// }
 
