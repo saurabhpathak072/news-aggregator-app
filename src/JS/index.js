@@ -14,7 +14,7 @@ const searchBox = document.querySelector('#search');
 const notFound = document.querySelector('.not-found');
 const error = document.querySelector('.error');
 const clearSearch = document.querySelector('#clear-search');
-const switcher = document.querySelector('mode-switch');
+const switcher = document.querySelector('.mode-switch');
 
 // data
 
@@ -110,7 +110,7 @@ function renderNews(news) {
         const author = n.author ? n.author : n.source.name;
         const image = n.urlToImage ? n.urlToImage
         : 'https://via.placeholder.com/150';
-        html += `<li class="articles">
+        html += `<li class="article">
         <a href="${n.url}" class="article-link">
             <div class="article__head">
                 <img
