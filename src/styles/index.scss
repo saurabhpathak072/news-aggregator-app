@@ -141,7 +141,7 @@ main{
   justify-content: center;
 }
 
-.articles{
+.article{
   display: none;
   grid-template-columns: repear(3, 32.35%);
   gap: 3.2rem;
@@ -164,7 +164,7 @@ main{
 }
 
 // components
-.articles{
+.article{
   background-color: var(--card-bg);
   border-radius: 0.6rem;
   align-self: flex-start;
