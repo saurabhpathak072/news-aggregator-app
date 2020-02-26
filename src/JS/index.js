@@ -128,6 +128,7 @@ function renderNews(news) {
             <div class="article__footer>
                 <span class="article-author">${author}<span>
             </div>
+            <span id="article-author" class="article-author">${author}<span>
         </a>
     </li>`;
 
