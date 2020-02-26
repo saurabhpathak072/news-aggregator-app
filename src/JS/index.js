@@ -125,9 +125,7 @@ function renderNews(news) {
             <p class="article-description">
                 ${n.description ? n.description : ''}
             </p>
-            <div class="article__footer>
-                <span class="article-author">${author}<span>
-            </div>
+            
             <span id="article-author" class="article-author">${author}<span>
         </a>
     </li>`;
