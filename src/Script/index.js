@@ -120,7 +120,7 @@ function handleError(msg = null) {
 function renderNews(news) {
   let html = '';
   news.forEach(n => {
-    const author = n.author ? n.author : n.source.name;
+    const author = n.author ? n.author : -n.source.name;
     const image = n.urlToImage
       ? n.urlToImage
       : 'https://www.okea.org/wp-content/uploads/2019/10/placeholder.png';
@@ -141,7 +141,7 @@ function renderNews(news) {
         </p>
         <div class="article__footer">
           <span class="article-author">
-          - ${author}
+          -${author}
           </span>
         </div>
       </a>
