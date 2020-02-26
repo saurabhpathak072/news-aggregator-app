@@ -223,6 +223,10 @@ main{
       overflow: hidden;
    }
 
+   &-author{
+     display: inline-block;
+   }
+
    @media screen and (max-width: 576px) {
      &-link{
        padding: 0.8rem;
